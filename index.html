@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consulta Paciente</title>
+</head>
+<body>
+
+<h1>Consulta de Paciente</h1>
+
+<button onclick="consultar()">Consultar</button>
+
+<pre id="resultado"></pre>
+
+<script>
+async function consultar() {
+  const res = await fetch("http://localhost:3000/api/pacientes/1");
+  const data = await res.json();
+
+  document.getElementById("resultado").innerText =
+    JSON.stringify(data, null, 2);
+}
+</script>
+
+</body>
+</html>
