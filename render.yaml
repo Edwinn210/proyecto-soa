@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: proyecto-soa-backend
+    env: node
+    plan: free
+    rootDir: .
+    buildCommand: npm ci
+    startCommand: npm start
+    autoDeploy: true
+
